@@ -6,18 +6,19 @@
 #include <iostream>
 #include <iomanip>
 #include <sstream>
-
+int a = 1;
 double  g_dElapsedTime;
+double  g_dtitleTime;
 double  g_dDeltaTime;
 bool    g_abKeyPressed[K_COUNT];
+bool	arrowTime = false;
 
 // Game specific variables here
 SGameChar   g_sChar;
-EGAMESTATES g_eGameState = S_SPLASHSCREEN;
+EGAMESTATES g_eGameState = S_TITLESCREEN;
 double  g_dBounceTime; // this is to prevent key bouncing, so we won't trigger keypresses more than once
-
 // Console object
-Console g_Console(160, 75, "SP1 Framework");
+Console g_Console(140, 70, " ");
 
 //--------------------------------------------------------------
 // Purpose  : Initialisation function
@@ -30,10 +31,11 @@ void init( void )
 {
     // Set precision for floating point output
     g_dElapsedTime = 0.0;
+	g_dtitleTime = g_dElapsedTime;
     g_dBounceTime = 0.0;
 
     // sets the initial state for the game
-    g_eGameState = S_SPLASHSCREEN;
+    g_eGameState = S_TITLESCREEN;
 
     g_sChar.m_cLocation.X = g_Console.getConsoleSize().X / 2;
     g_sChar.m_cLocation.Y = g_Console.getConsoleSize().Y / 2;
@@ -76,6 +78,8 @@ void getInput( void )
     g_abKeyPressed[K_RIGHT]  = isKeyPressed(VK_RIGHT);
     g_abKeyPressed[K_SPACE]  = isKeyPressed(VK_SPACE);
     g_abKeyPressed[K_ESCAPE] = isKeyPressed(VK_ESCAPE);
+	g_abKeyPressed[K_ENTER] = isKeyPressed(VK_RETURN);
+	g_abKeyPressed[K_LEFTM] = isKeyPressed(VK_LBUTTON);
 }
 
 //--------------------------------------------------------------
@@ -96,12 +100,19 @@ void update(double dt)
 {
     // get the delta time
     g_dElapsedTime += dt;
+	g_dtitleTime += dt;
     g_dDeltaTime = dt;
 
     switch (g_eGameState)
     {
-        case S_SPLASHSCREEN : splashScreenWait(); // game logic for the splash screen
+        case S_TITLESCREEN : titleScreenWait1(); // game logic for the title screen
             break;
+		case S_TITLESCREEN1: titleScreenWait2(); // game logic for the title screen
+			break;
+		case S_TITLESCREEN2: titleScreenWait3(); // game logic for the title screen
+			break;
+		case S_TITLESCREEN3: titleScreenWait4(); // game logic for the title screen
+			break;
         case S_GAME: gameplay(); // gameplay logic when we are in the game
             break;
     }
@@ -117,10 +128,17 @@ void update(double dt)
 void render()
 {
     clearScreen();      // clears the current screen and draw from scratch 
+	
     switch (g_eGameState)
     {
-        case S_SPLASHSCREEN: renderSplashScreen();
+        case S_TITLESCREEN: rendertitleScreen1();
             break;
+		case S_TITLESCREEN1: rendertitleScreen2();
+			break;
+		case S_TITLESCREEN2: rendertitleScreen3();
+			break;
+		case S_TITLESCREEN3: rendertitleScreen4();
+			break;
         case S_GAME: renderGame();
             break;
     }
@@ -128,10 +146,99 @@ void render()
     renderToScreen();   // dump the contents of the buffer to the screen, one frame worth of game
 }
 
-void splashScreenWait()    // waits for time to pass in splash screen
+void titleScreenWait1()    // waits for time to pass in title screen
 {
-    if (g_dElapsedTime > 3.0) // wait for 3 seconds to switch to game mode, else do nothing
-        g_eGameState = S_GAME;
+	bool bSomethingHappened = false;
+	if (g_dBounceTime > g_dElapsedTime)
+		return;
+		if (g_abKeyPressed[K_ENTER])
+		{
+			g_eGameState = S_GAME;
+			bSomethingHappened = true;
+		}
+		else if (g_abKeyPressed[K_DOWN])
+		{
+			g_eGameState = S_TITLESCREEN1;
+			bSomethingHappened = true; 
+		}
+		if (bSomethingHappened)
+		{
+			// set the bounce time to some time in the future to prevent accidental triggers
+			g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
+		}
+}
+void titleScreenWait2()    // waits for time to pass in title screen
+{
+	bool bSomethingHappened = false;
+	if (g_dBounceTime > g_dElapsedTime)
+		return;
+	if (g_abKeyPressed[K_ENTER])
+	{
+		g_eGameState = S_GAME;
+		bSomethingHappened = true;
+	}
+	else if (g_abKeyPressed[K_DOWN])
+	{
+		g_eGameState = S_TITLESCREEN2;
+		bSomethingHappened = true;
+	}
+	else if (g_abKeyPressed[K_UP])
+	{
+		g_eGameState = S_TITLESCREEN;
+		bSomethingHappened = true;
+	}
+	if (bSomethingHappened)
+	{
+		// set the bounce time to some time in the future to prevent accidental triggers
+		g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
+	}
+}
+void titleScreenWait3()    // waits for time to pass in title screen
+{
+	bool bSomethingHappened = false;
+	if (g_dBounceTime > g_dElapsedTime)
+		return;
+	if (g_abKeyPressed[K_ENTER])
+	{
+		g_eGameState = S_GAME;
+		bSomethingHappened = true;
+	}
+	else if (g_abKeyPressed[K_DOWN])
+	{
+		g_eGameState = S_TITLESCREEN3;
+		bSomethingHappened = true;
+	}
+	else if (g_abKeyPressed[K_UP])
+	{
+		g_eGameState = S_TITLESCREEN1;
+		bSomethingHappened = true;
+	}
+	if (bSomethingHappened)
+	{
+		// set the bounce time to some time in the future to prevent accidental triggers
+		g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
+	}
+}
+void titleScreenWait4()    // waits for time to pass in title screen
+{
+	bool bSomethingHappened = false;
+	if (g_dBounceTime > g_dElapsedTime)
+		return;
+	if (g_abKeyPressed[K_ENTER])
+	{
+			g_bQuitGame = true;
+	}
+
+	else if (g_abKeyPressed[K_UP])
+	{
+		g_eGameState = S_TITLESCREEN2;
+		bSomethingHappened = true;
+	}
+	if (bSomethingHappened)
+	{
+		// set the bounce time to some time in the future to prevent accidental triggers
+		g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
+	}
 }
 
 void gameplay()            // gameplay logic
@@ -141,6 +248,19 @@ void gameplay()            // gameplay logic
                         // sound can be played here too.
 }
 
+
+void processUserInput()
+{
+    // quits the game if player hits the escape key
+    if (g_abKeyPressed[K_ESCAPE])
+        g_bQuitGame = true;    
+}
+
+void clearScreen()
+{
+    // Clears the buffer with this colour attribute
+    g_Console.clearBuffer(0x0F);
+}
 void moveCharacter()
 {
 	bool bSomethingHappened = false;
@@ -149,25 +269,25 @@ void moveCharacter()
 
 	// Updating the location of the character based on the key press
 	// providing a beep sound whenver we shift the character
-	if (g_abKeyPressed[K_UP] && g_MapValue[g_sChar.m_cLocation.X][g_sChar.m_cLocation.Y - 1] != '#')
+	if (g_abKeyPressed[K_UP] && g_sChar.m_cLocation.Y > 0)
 	{
 		//Beep(1440, 30);
 		g_sChar.m_cLocation.Y--;
 		bSomethingHappened = true;
 	}
-	if (g_abKeyPressed[K_LEFT] && g_MapValue[g_sChar.m_cLocation.X - 1][g_sChar.m_cLocation.Y] != '#')
+	if (g_abKeyPressed[K_LEFT] && g_sChar.m_cLocation.X > 0)
 	{
 		//Beep(1440, 30);
 		g_sChar.m_cLocation.X--;
 		bSomethingHappened = true;
 	}
-	if (g_abKeyPressed[K_DOWN] && g_MapValue[g_sChar.m_cLocation.X][g_sChar.m_cLocation.Y + 1] != '#')
+	if (g_abKeyPressed[K_DOWN] && g_sChar.m_cLocation.Y < g_Console.getConsoleSize().Y - 1)
 	{
 		//Beep(1440, 30);
 		g_sChar.m_cLocation.Y++;
 		bSomethingHappened = true;
 	}
-	if (g_abKeyPressed[K_RIGHT] && g_MapValue[g_sChar.m_cLocation.X + 1][g_sChar.m_cLocation.Y] != '#')
+	if (g_abKeyPressed[K_RIGHT] && g_sChar.m_cLocation.X < g_Console.getConsoleSize().X - 1)
 	{
 		//Beep(1440, 30);
 		g_sChar.m_cLocation.X++;
@@ -185,33 +305,138 @@ void moveCharacter()
 		g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
 	}
 }
-void processUserInput()
+void rendertitleScreen1()  // renders the title screen
 {
-    // quits the game if player hits the escape key
-    if (g_abKeyPressed[K_ESCAPE])
-        g_bQuitGame = true;    
+	if (g_dtitleTime > 0.1)
+	{
+		if (arrowTime == false)
+			arrowTime = true;
+		else
+			arrowTime = false;
+		g_dtitleTime = 0;
+	}
+
+	if (arrowTime == true)
+	{
+		rendertitleScreen6();
+	}
+	else
+	{
+		string map = titlestart();
+		COORD c = g_Console.getConsoleSize();
+		c.Y = 0;
+		c.X = 0;
+		g_Console.writeToBuffer(c, map, 0x0F);
+	}
+}
+void rendertitleScreen2()  // renders the title screen
+{
+	if (g_dtitleTime > 0.1)
+	{
+		if (arrowTime == false)
+			arrowTime = true;
+		else
+			arrowTime = false;
+		g_dtitleTime = 0;
+	}
+
+	if (arrowTime == true)
+	{
+		rendertitleScreen7();
+	}
+	else
+	{
+		string map = titlecontrols();
+		COORD c = g_Console.getConsoleSize();
+		c.Y = 0;
+		c.X = 0;
+		g_Console.writeToBuffer(c, map, 0x0F);
+	}
+}
+void rendertitleScreen3()  // renders the title screen
+{
+	if (g_dtitleTime > 0.1)
+	{
+		if (arrowTime == false)
+			arrowTime = true;
+		else
+			arrowTime = false;
+		g_dtitleTime = 0;
+	}
+
+	if (arrowTime == true)
+	{
+		rendertitleScreen5();
+	}
+	else {
+		string map = titlecredits();
+		COORD c = g_Console.getConsoleSize();
+		c.Y = 0;
+		c.X = 0;
+		g_Console.writeToBuffer(c, map, 0x0F);
+	}
+}
+void rendertitleScreen4()  // renders the title screen
+{
+	if (g_dtitleTime > 0.1)
+	{
+		if (arrowTime == false)
+			arrowTime = true;
+		else
+			arrowTime = false;
+		g_dtitleTime = 0;
+	}
+
+	if (arrowTime == true)
+	{
+		rendertitleScreen8();
+	}
+	else {
+		string map = titleexit();
+		COORD c = g_Console.getConsoleSize();
+		c.Y = 0;
+		c.X = 0;
+		g_Console.writeToBuffer(c, map, 0x0F);
+	}
+
 }
 
-void clearScreen()
+void rendertitleScreen5()  // renders the title screen
 {
-    // Clears the buffer with this colour attribute
-    g_Console.clearBuffer(0x1F);
-}
+	string map = titleblink();
+	COORD c = g_Console.getConsoleSize();
+	c.Y = 0;
+	c.X = 0;
+	g_Console.writeToBuffer(c, map, 0x0F);
 
-void renderSplashScreen()  // renders the splash screen
+}
+void rendertitleScreen6()  // renders the title screen
 {
-    COORD c = g_Console.getConsoleSize();
-    c.Y /= 3;
-    c.X = c.X / 2 - 9;
-    g_Console.writeToBuffer(c, "A game in 3 seconds", 0x03);
-    c.Y += 1;
-    c.X = g_Console.getConsoleSize().X / 2 - 20;
-    g_Console.writeToBuffer(c, "Press <Space> to change character colour", 0x09);
-    c.Y += 1;
-    c.X = g_Console.getConsoleSize().X / 2 - 9;
-    g_Console.writeToBuffer(c, "Press 'Esc' to quit", 0x09);
-}
+	string map = titleblink2();
+	COORD c = g_Console.getConsoleSize();
+	c.Y = 0;
+	c.X = 0;
+	g_Console.writeToBuffer(c, map, 0x0F);
 
+}
+void rendertitleScreen7()  // renders the title screen
+{
+	string map = titleblink3();
+	COORD c = g_Console.getConsoleSize();
+	c.Y = 0;
+	c.X = 0;
+	g_Console.writeToBuffer(c, map, 0x0F);
+
+}
+void rendertitleScreen8()  // renders the title screen
+{
+	string map = titleblink4();
+	COORD c = g_Console.getConsoleSize();
+	c.Y = 0;
+	c.X = 0;
+	g_Console.writeToBuffer(c, map, 0x0F);
+
+}
 void renderGame()
 {
     renderMap();        // renders the map to the buffer first

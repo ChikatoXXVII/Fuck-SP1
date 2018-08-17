@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include<cstdlib>
 using namespace std;
 int *weight;
@@ -52,4 +52,4 @@ void enemyencounter(int levl)
 	}
 
 	
-}
+}*/

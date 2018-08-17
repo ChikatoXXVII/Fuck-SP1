@@ -3,11 +3,11 @@
 #include <string>
 using namespace std;
 
-string firstlevel()
+string seclevelfirst()
 {
 	string total;
 	string line;
-	ifstream myfile("map7.txt");
+	ifstream myfile("map1.3(first!).txt");
 	if (myfile.is_open())
 	{
 		while (getline(myfile, line))
@@ -20,13 +20,22 @@ string firstlevel()
 					line[index] = (char)219;
 					break;
 				case '$':
-					line[index] = (char)176;
+					line[index] = ' '; //negative trap tile
 					break;
 				case '!':
 					line[index] = ' '; // positive trap tile
 					break;
-				case '&':
-					line[index] = ' ';//monster tile
+				case '1':
+					line[index] = ' ';//mummy tile
+					break;
+				case '2':
+					line[index] = ' ';//vampire bat tile
+					break;
+				case '3':
+					line[index] = ' ';//serpent tile
+					break;
+				case '4':
+					line[index] = ' ';//Myrmekes tile
 					break;
 				case '@':
 					line[index] = (char)177; // ending tile

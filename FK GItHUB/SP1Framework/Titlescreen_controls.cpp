@@ -12,23 +12,25 @@ string titlecontrols()
 	{
 		while (getline(myfile, line))
 		{
-			for (unsigned int index = 0; index < line.size(); index++)
+			for (unsigned int row = 0; row <line.size(); row++)
 			{
-				switch (line[index])
-				{
-				case '-':
-					line[index] = (char)196;
-					break;
-				case '|':
-					line[index] = (char)179;
-					break;
-				case '.':
-					line[index] = (char)218;
-					break;
-				case ',':
-					line[index] = (char)192;
-					break;
-				}
+				
+					switch (line[row])
+					{
+					case '-':
+						line[row] = (char)196;
+						break;
+					case '|':
+						line[row] = (char)179;
+						break;
+					case '.':
+						line[row] = (char)218;
+						break;
+					case ',':
+						line[row] = (char)192;
+						break;
+					}
+				
 			}
 			total += line + '\n';
 		}

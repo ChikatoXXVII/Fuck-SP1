@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "Charmovement.h"
+=======
+/*#include "Charmovement.h"
+>>>>>>> a6a5fe42d544e3b72a9692c14d03bc6d563a7305
 
 
 void moveCharacter()
@@ -44,4 +48,8 @@ void moveCharacter()
 		// set the bounce time to some time in the future to prevent accidental triggers
 		g_dBounceTime = g_dElapsedTime + 0.125; // 125ms should be enough
 	}
+<<<<<<< HEAD
 }
+=======
+}*/
+>>>>>>> a6a5fe42d544e3b72a9692c14d03bc6d563a7305
