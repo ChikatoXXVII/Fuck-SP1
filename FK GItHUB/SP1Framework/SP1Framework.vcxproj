@@ -78,10 +78,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\CharacterStats.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\ComabtCalcpp.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Combat.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Movement of Character.cpp" />
+    <ClCompile Include="C0mbat.cpp" />
+    <ClCompile Include="CharacterStatistic.cpp" />
+    <ClCompile Include="CombatCal.cpp" />
     <ClCompile Include="CombatUIEquipment.cpp" />
     <ClCompile Include="CombatUIfight.cpp" />
     <ClCompile Include="CombatUIMagic.cpp" />
@@ -102,13 +101,14 @@
     <ClCompile Include="Level8.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CombatUIItems.cpp" />
+    <ClCompile Include="MovementOfCharacter.cpp" />
     <ClCompile Include="Titlescreen_controls.cpp" />
     <ClCompile Include="Titlescreen_credit.cpp" />
     <ClCompile Include="Titlescreen_exit.cpp" />
     <ClCompile Include="Titlescreen_start.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Charmovement.h" />
+    <ClInclude Include="Charamovement.h" />
     <ClInclude Include="Framework\console.h" />
     <ClInclude Include="Framework\timer.h" />
     <ClInclude Include="game.h" />

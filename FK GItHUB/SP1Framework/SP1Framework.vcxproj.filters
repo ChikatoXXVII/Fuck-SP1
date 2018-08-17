@@ -66,15 +66,6 @@
     <ClCompile Include="GAMEOVER.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\CharacterStats.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Movement of Character.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\ComabtCalcpp.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
     <ClCompile Include="CombatUIRun.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
@@ -102,7 +93,16 @@
     <ClCompile Include="Titlescreen_controls.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Combat.cpp">
+    <ClCompile Include="CharacterStatistic.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatCal.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C0mbat.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementOfCharacter.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,7 +116,7 @@
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Charmovement.h">
+    <ClInclude Include="Charamovement.h">
       <Filter>Header Files\Framework</Filter>
     </ClInclude>
   </ItemGroup>
