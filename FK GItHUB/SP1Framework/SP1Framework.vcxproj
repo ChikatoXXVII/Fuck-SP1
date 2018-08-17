@@ -78,35 +78,53 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="C0mbat.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level1_tutorial.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.0.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.1(first$).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.2(second$).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.3(first!).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.4(second!).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.5(third!).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.0.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.1(first$).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.2(sec$).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.3(first!).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.4(sec!).cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level4.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level5.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level6.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level7.cpp" />
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\Level8.cpp" />
+    <ClCompile Include="CharacterStatistic.cpp" />
+    <ClCompile Include="CombatCal.cpp" />
     <ClCompile Include="CombatUIEquipment.cpp" />
     <ClCompile Include="CombatUIfight.cpp" />
     <ClCompile Include="CombatUIMagic.cpp" />
     <ClCompile Include="CombatUIRun.cpp" />
-    <ClCompile Include="EnemyEncounter.cpp" />
     <ClCompile Include="Enmies States.cpp" />
     <ClCompile Include="Framework\console.cpp" />
     <ClCompile Include="Framework\timer.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="GAMEOVER.cpp" />
-    <ClCompile Include="level1_tutorial.cpp" />
-    <ClCompile Include="level2.cpp" />
-    <ClCompile Include="level3.cpp" />
-    <ClCompile Include="level4.cpp" />
-    <ClCompile Include="level5.cpp" />
-    <ClCompile Include="level6.cpp" />
-    <ClCompile Include="level7.cpp" />
-    <ClCompile Include="Level8.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CombatUIItems.cpp" />
+    <ClCompile Include="MovementOfCharacter.cpp" />
+    <ClCompile Include="Titleblink2.cpp" />
+    <ClCompile Include="titleblink3.cpp" />
+    <ClCompile Include="Titleblink4.cpp" />
+    <ClCompile Include="TitleScreenBlink.cpp" />
     <ClCompile Include="Titlescreen_controls.cpp" />
     <ClCompile Include="Titlescreen_credit.cpp" />
     <ClCompile Include="Titlescreen_exit.cpp" />
     <ClCompile Include="Titlescreen_start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Charamovement.h" />
     <ClInclude Include="Framework\console.h" />
     <ClInclude Include="Framework\timer.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="Startscreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,33 +36,6 @@
     <ClCompile Include="Enmies States.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyEncounter.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level1_tutorial.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="Level8.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level7.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level6.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level5.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level4.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level3.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="level2.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
     <ClCompile Include="GAMEOVER.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
@@ -93,6 +66,81 @@
     <ClCompile Include="Titlescreen_controls.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterStatistic.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatCal.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C0mbat.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementOfCharacter.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScreenBlink.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Titleblink2.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="titleblink3.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Titleblink4.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.1(first$).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.2(second$).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.3(first!).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.4(second!).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.5(third!).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.0.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.1(first$).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.2(sec$).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.3(first!).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level3.4(sec!).cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level4.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level5.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level6.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level7.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\Level8.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level1_tutorial.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jonka\Desktop\Studio Proj Backup\FK GItHUB\SP1Framework\level2.0.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\console.h">
@@ -103,6 +151,12 @@
     </ClInclude>
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Charamovement.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Startscreen.h">
+      <Filter>Header Files\Framework</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -31,6 +31,9 @@ string fourthlevel()
 				case '@':
 					line[index] = (char)177; // ending tile
 					break;
+				case '%':
+					line[index] = 'P'; // player tile
+					break;
 				}
 			}
 			total += line + '\n';
