@@ -78,10 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\CharacterStats.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\ComabtCalcpp.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Combat.cpp" />
-    <ClCompile Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Movement of Character.cpp" />
     <ClCompile Include="CombatUIEquipment.cpp" />
     <ClCompile Include="CombatUIfight.cpp" />
     <ClCompile Include="CombatUIMagic.cpp" />
@@ -108,7 +104,6 @@
     <ClCompile Include="Titlescreen_start.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Studio_project_1-4230ada56b8786322eadce8c0c32543d0daa54b2\SP1Framework\Charmovement.h" />
     <ClInclude Include="Framework\console.h" />
     <ClInclude Include="Framework\timer.h" />
     <ClInclude Include="game.h" />
